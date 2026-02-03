@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 
 const Contact: React.FC = () => {
     return (
-        <div className="pt-40 pb-32 px-6 lg:px-12 max-w-4xl mx-auto">
+        <div className="pt-24 md:pt-40 pb-32 px-6 lg:px-12 max-w-4xl mx-auto">
             <div className="space-y-16 text-center mb-16">
                 <div>
                     <motion.span
@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.85]"
+                        className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.85]"
                     >
                         LET'S TALK <br />
                         <span className="text-indigo-500 italic">STRATEGY.</span>

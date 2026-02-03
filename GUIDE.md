@@ -1,9 +1,18 @@
 
-# Portfolio Editing Guide
+## 1. Setting up the Contact Form (IMPORTANT)
+To receive messages in your email, you need to connect the form to a service called **Formspree**.
 
-Welcome! This guide will help you manage your portfolio content, including text and images, so you can keep everything up-to-date yourself.
+- **Step 1**: Go to [Formspree.io](https://formspree.io) and create a free account.
+- **Step 2**: Create a new form in their dashboard and name it "Portfolio Contact".
+- **Step 3**: Copy the **Form ID** (it looks like a short code of letters/numbers, e.g., `mqaeokbr`).
+- **Step 4**: Open `components/ContactForm.tsx` ([Open File](file:///Users/stephanielouiselucena/Downloads/stephanie-lucena-portfolio/components/ContactForm.tsx)) and find line 18:
+  ```typescript
+  const response = await fetch("https://formspree.io/f/mqaeokbr", {
+  ```
+- **Step 5**: Replace `mqaeokbr` (the placeholder) with your actual Form ID.
+- **Step 6**: Save the file and push it to GitHub (or I can do it for you!).
 
-## 1. Editing Text Content
+## 2. Editing Text Content
 Most of the core information (Experience, Projects, Tools) is stored in a single file to make it easy for you to edit.
 
 - **File Location**: `constants.tsx` ([Open File](file:///Users/stephanielouiselucena/Downloads/stephanie-lucena-portfolio/constants.tsx))
@@ -53,9 +62,14 @@ To make your website public and connect your domain, the easiest way is using **
 
 ### Step C: Connect Your Domain
 1. In your Vercel project, go to **Settings** > **Domains**.
-2. Enter your custom domain name.
-3. Vercel will give you a few "DNS Records" (Value and Type). 
-4. Log in to where you bought your domain (like GoDaddy, Namecheap, etc.) and update your DNS settings with those values.
+2. Enter your custom domain name (e.g., `stephanielucena.com`).
+3. Vercel will give you a few "DNS Records". Usually:
+    - **A Record**: Name `@`, Value `76.76.21.21`
+    - **CNAME Record**: Name `www`, Value `cname.vercel-dns.com`
+4. Log in to your domain provider (where you saw the CNAME record in your screenshot) and update them to match Vercel exactly.
 5. Once saved, it usually takes 15–60 minutes for the domain to point to your new site!
+
+> [!TIP]
+> If you already have a CNAME for `www` pointing to your root domain, Vercel might ask you to change it to `cname.vercel-dns.com` for better performance and easier SSL management.
 
 Happy growing! 🚀

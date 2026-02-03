@@ -44,7 +44,7 @@ const WorkGrid: React.FC<WorkGridProps> = ({ caseStudies, onSelect }) => {
                 <span className="h-px w-8 bg-indigo-500" />
                 <p className="text-indigo-400 text-xs font-black uppercase tracking-[0.3em]">{cs.category}</p>
               </div>
-              <h3 className="text-4xl md:text-6xl font-bold text-white group-hover:text-indigo-50 transition-colors leading-[1.1] tracking-tight">{cs.title}</h3>
+              <h3 className="text-3xl md:text-6xl font-bold text-white group-hover:text-indigo-50 transition-colors leading-[1.1] tracking-tight">{cs.title}</h3>
             </div>
 
             <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl font-light">

@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-[clamp(2.5rem,10vw,8rem)] font-bold tracking-tight text-white leading-[0.85] mb-12"
+              className="text-[clamp(2.5rem,8vw,6rem)] font-bold tracking-tight text-white leading-[0.85] mb-12"
             >
               Marketing Strategies <br />
               <span className="bg-gradient-to-r from-indigo-500 via-purple-400 to-indigo-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">That Drive Business </span>
@@ -72,18 +72,18 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="flex gap-6"
+                className="flex flex-col sm:flex-row gap-4 md:gap-6"
               >
                 <button
                   onClick={onCtaClick}
-                  className="group relative flex items-center gap-4 bg-white text-black px-10 py-6 rounded-full font-bold text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+                  className="group relative flex items-center justify-center gap-4 bg-white text-black px-10 py-5 md:py-6 rounded-full font-bold text-lg md:text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
                 >
                   Explore Work
                   <ArrowDownRight size={24} className="group-hover:rotate-45 transition-transform duration-300" />
                 </button>
                 <Link
                   to="/contact"
-                  className="group relative flex items-center gap-4 bg-white/5 border border-white/10 text-white px-10 py-6 rounded-full font-bold text-xl hover:bg-white/10 transition-all backdrop-blur-sm"
+                  className="group relative flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white px-10 py-5 md:py-6 rounded-full font-bold text-lg md:text-xl hover:bg-white/10 transition-all backdrop-blur-sm"
                 >
                   Get in Touch
                 </Link>

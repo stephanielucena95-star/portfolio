@@ -1,9 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { CaseStudy } from '../types';
 import { ArrowLeft, CheckCircle2, Layout, Target, Zap, User } from 'lucide-react';
-import Navbar from './Navbar';
-import Footer from './Footer';
 
 interface PageProps {
   caseStudy: CaseStudy;
@@ -17,20 +14,20 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-indigo-500/30">
-      <nav className="fixed top-0 left-0 right-0 z-50 py-6 px-6 lg:px-12 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <button 
+      <div className="pt-20 px-6 lg:px-12 max-w-7xl mx-auto border-b border-white/5 bg-[#0a0a0a]/80 backdrop-blur-xl sticky top-20 z-40">
+        <div className="py-6 flex justify-between items-center">
+          <button
             onClick={onBack}
             className="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors font-bold uppercase tracking-widest text-xs"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-            Back to Home
+            Back to Explore
           </button>
           <div className="hidden md:block text-slate-500 text-xs font-bold uppercase tracking-widest">
             Case Study: {caseStudy.client}
           </div>
         </div>
-      </nav>
+      </div>
 
       <main className="pt-40 pb-32 px-6 lg:px-12 max-w-7xl mx-auto">
         {/* Header */}
@@ -96,7 +93,7 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
                   <div key={i} className="p-8 border border-white/5 rounded-3xl bg-white/[0.01]">
                     <div className="flex gap-4">
                       <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-xs font-bold text-slate-500 flex-shrink-0">
-                        0{i+1}
+                        0{i + 1}
                       </div>
                       <p className="text-lg text-slate-300 leading-relaxed">{item}</p>
                     </div>
@@ -136,7 +133,6 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 };

@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
         <div className={`absolute inset-x-4 md:inset-x-8 top-1/2 -translate-y-1/2 h-[90%] glass-card rounded-2xl transition-opacity duration-500 -z-10 ${isScrolled ? 'opacity-100' : 'opacity-0'
           }`} />
 
-        <Link to="/" className="text-2xl font-black tracking-tighter text-white z-10 hover:opacity-70 transition-opacity">
+        <Link to="/" className="text-xl md:text-2xl font-black tracking-tighter text-white z-10 hover:opacity-70 transition-opacity">
           SL.
         </Link>
 

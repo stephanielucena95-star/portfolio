@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-32 px-6 lg:px-12 bg-white/[0.01] border-y border-white/5 mt-20">
+        <section id="about" className="py-20 md:py-32 px-6 lg:px-12 bg-white/[0.01] border-y border-white/5 mt-10 md:mt-20">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">
                 <div>
                     <h2 className="text-4xl font-bold text-white mb-8 tracking-tight uppercase tracking-widest">About Me</h2>
@@ -35,7 +35,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
-                    <div className="p-10 border border-white/10 rounded-[3rem] bg-indigo-600/5">
+                    <div className="p-6 md:p-10 border border-white/10 rounded-3xl md:rounded-[3rem] bg-indigo-600/5">
                         <h3 className="text-2xl font-bold text-white mb-6">The Growth Approach</h3>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8">
                             I prioritize systems over one-off campaigns, platform-native thinking over generic playbooks, and business impact over surface-level metrics. I care about what actually moves the business beyond vanity metrics.

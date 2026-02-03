@@ -11,13 +11,28 @@ const ContactForm: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // In a production environment, you would use a service like Formspree
-        // to handle the email delivery without a backend.
-        // Example: fetch("https://formspree.io/f/your-id", { method: 'POST', body: new FormData(e.currentTarget) })
+        const formData = new FormData(e.currentTarget);
 
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        setIsSubmitting(false);
-        setIsSubmitted(true);
+        try {
+            const response = await fetch("https://formspree.io/f/mqaeokbr", { // Placeholder Formspree ID
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                throw new Error("Submission failed");
+            }
+        } catch (err) {
+            console.error(err);
+            alert("There was an error sending your message. Please try again or email me directly.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (isSubmitted) {
