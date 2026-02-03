@@ -14,7 +14,7 @@ const ContactForm: React.FC = () => {
         const formData = new FormData(e.currentTarget);
 
         try {
-            const response = await fetch("https://formspree.io/f/mqaeokbr", { // Placeholder Formspree ID
+            const response = await fetch("https://formspree.io/f/meezwkqn", { // Placeholder Formspree ID
                 method: "POST",
                 body: formData,
                 headers: {
