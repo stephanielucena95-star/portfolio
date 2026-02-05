@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
@@ -27,6 +28,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
+      <Analytics />
       <div className="min-h-screen selection:bg-white selection:text-black bg-[#050505] text-slate-200">
         <div className="fixed inset-0 bg-grid pointer-events-none z-0 opacity-40" />
         <div className="fixed inset-0 bg-gradient-to-tr from-indigo-500/5 via-transparent to-purple-500/5 pointer-events-none z-0" />
