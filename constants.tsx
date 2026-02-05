@@ -61,7 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Shorter formats (6s–15s) outperformed longer cuts in completion and efficiency."
     ],
     myRole: "Paid Media Manager – Led channel planning, budget allocation, oversighting in-flight optimization, and synthesizing performance/brand lift reporting.",
-    imageUrl: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&q=80&w=800", // Wayfarer style glasses
     tags: ["Paid Social", "Global Scale", "Brand Lift"]
   },
   {
@@ -86,7 +86,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Faster participation in high-velocity retail moments (Mega sales, paydays)."
     ],
     myRole: "Strategy + Execution – Designed the template system and led cross-functional team alignment.",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/assets/projects/fmcg-ecommerce.png",
     tags: ["E-commerce", "Automation", "APAC"]
   },
   {
@@ -111,7 +111,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Improved production efficiency through defined content buckets."
     ],
     myRole: "Strategy & Paid Media – Led content framework development and performance-led iteration.",
-    imageUrl: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/assets/projects/oral-care.png",
     tags: ["Content Strategy", "FMCG", "Social Strategy"]
   },
   {
@@ -136,7 +136,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Significant revenue impact within a restricted sales window."
     ],
     myRole: "Paid Media Manager – End-to-end execution from tracking setup to budget optimization.",
-    imageUrl: "https://images.unsplash.com/photo-1478737270239-2fccd27ee1f3?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/assets/projects/conference-sem.png",
     tags: ["SEM", "Performance", "ROAS"]
   },
   {
@@ -161,7 +161,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Recognized as a Top 15 Social Enterprise in the region."
     ],
     myRole: "Go-To-Market & Growth Lead – Designed the launch/PR strategy and orchestrated media outreach.",
-    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/assets/projects/fintech-gtm.png",
     tags: ["PR", "FinTech", "GTM"]
   },
   {
@@ -186,7 +186,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Supported app visibility through trusted information channels."
     ],
     myRole: "PR & Growth – Led media and communication strategy for the app launch.",
-    imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800",
+    imageUrl: "/assets/projects/public-health.png",
     tags: ["Public Health", "Non-Profit", "Communication"]
   }
 ];
