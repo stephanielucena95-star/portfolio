@@ -123,10 +123,10 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
           </h3>
           <button
             onClick={onBack}
-            className="group relative inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+            className="group relative inline-flex items-center gap-4 bg-white text-black px-6 py-3.5 rounded-full font-bold text-base hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
           >
             See other marketing case studies
-            <ArrowLeft size={20} className="group-hover:-translate-x-1.5 transition-transform duration-300" />
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform duration-300" />
           </button>
         </div>
       </main>
