@@ -14,7 +14,7 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-indigo-500/30">
-      <div className="pt-20 px-6 lg:px-12 max-w-7xl mx-auto border-b border-white/5 bg-[#0a0a0a]/80 backdrop-blur-xl sticky top-20 z-40">
+      <div className="hidden md:block pt-20 px-6 lg:px-12 max-w-7xl mx-auto border-b border-white/5 bg-[#0a0a0a]/80 backdrop-blur-xl sticky top-20 z-40">
         <div className="py-6 flex justify-between items-center">
           <button
             onClick={onBack}
@@ -23,13 +23,13 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             Back to Explore
           </button>
-          <div className="hidden md:block text-slate-500 text-xs font-bold uppercase tracking-widest">
+          <div className="text-slate-500 text-xs font-bold uppercase tracking-widest">
             Case Study: {caseStudy.client}
           </div>
         </div>
       </div>
 
-      <main className="pt-40 pb-32 px-6 lg:px-12 max-w-7xl mx-auto">
+      <main className="pt-24 md:pt-40 pb-32 px-6 lg:px-12 max-w-7xl mx-auto">
         {/* Header */}
         <div className="max-w-4xl mb-24">
           <div className="flex gap-3 mb-8">
