@@ -1,14 +1,14 @@
-
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Hero from '../components/Hero';
 import ToolsGrid from '../components/ToolsGrid';
 
 const Home: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <Hero onCtaClick={() => {
-        window.location.href = '/work';
-      }} />
+      <Hero onCtaClick={() => navigate('/work')} />
       <div id="tools">
         <ToolsGrid />
       </div>
