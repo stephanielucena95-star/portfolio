@@ -63,8 +63,8 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                 <p className="text-xl md:text-2xl text-slate-400 leading-relaxed font-light mb-4">
                   Case Studies in <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Growth</span>, <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Performance</span>, and <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Brand Building</span>.
                 </p>
-                <p className="text-lg text-slate-500 font-medium">
-                  Stephanie Lucena
+                <p className="text-xl md:text-2xl text-white font-black tracking-tight mt-6">
+                  SL. STEPHANIE LUCENA
                 </p>
               </motion.div>
 
@@ -109,7 +109,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
               className="flex flex-wrap gap-x-12 md:gap-x-20 gap-y-10 items-center opacity-60 hover:opacity-100 transition-opacity duration-700"
             >
               {[
-                { name: 'EYEWEAR & TECH', id: 'wearable-tech-launch' },
+                { name: 'WEARABLE TECH', id: 'wearable-tech-launch' },
                 { name: 'GLOBAL MEDIA AGENCY', id: '#tools' },
                 { name: 'LEGACY FMCG', id: 'oral-care-content' },
                 { name: 'E-COMMERCE', id: 'fmcg-ecommerce-system' },

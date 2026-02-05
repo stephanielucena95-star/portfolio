@@ -116,6 +116,19 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
             </div>
           </div>
         </div>
+        {/* Feedback/CTA Section */}
+        <div className="mt-32 pt-24 border-t border-white/5 text-center">
+          <h3 className="text-3xl md:text-5xl font-bold text-white mb-12 tracking-tight">
+            Want to see more?
+          </h3>
+          <button
+            onClick={onBack}
+            className="group relative inline-flex items-center gap-4 bg-white text-black px-12 py-6 rounded-full font-black text-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+          >
+            See Other Case Studies
+            <ArrowLeft size={24} className="group-hover:-translate-x-2 transition-transform duration-300" />
+          </button>
+        </div>
       </main>
 
     </div>
