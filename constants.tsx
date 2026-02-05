@@ -61,7 +61,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Shorter formats (6s–15s) outperformed longer cuts in completion and efficiency."
     ],
     myRole: "Paid Media Manager – Led channel planning, budget allocation, oversighting in-flight optimization, and synthesizing performance/brand lift reporting.",
-    imageUrl: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&q=80&w=800", // Wayfarer style glasses
+    imageUrl: "https://images.unsplash.com/photo-1625591339762-4312030c78a1?auto=format&fit=crop&q=80&w=800", // Premium eyewear shot
     tags: ["Paid Social", "Global Scale", "Brand Lift"]
   },
   {
@@ -216,7 +216,7 @@ export const TOOLS: Tool[] = [
 ];
 
 export const NAV_LINKS = [
-  { name: "Work", href: "/work" },
+  { name: "My Work", href: "/work" },
   { name: "Tools", href: "/#tools" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" }

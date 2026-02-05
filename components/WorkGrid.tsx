@@ -61,7 +61,7 @@ const WorkGrid: React.FC<WorkGridProps> = ({ caseStudies, onSelect }) => {
 
             <div className="pt-4">
               <div className="inline-flex items-center gap-3 text-white font-bold group">
-                <span className="text-lg border-b-2 border-indigo-500/50 group-hover:border-indigo-500 transition-all pb-1">Read Exploration</span>
+                <span className="text-lg border-b-2 border-indigo-500/50 group-hover:border-indigo-500 transition-all pb-1">Read Case Study</span>
                 <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all group-hover:rotate-45">
                   <ArrowUpRight size={22} />
                 </div>
