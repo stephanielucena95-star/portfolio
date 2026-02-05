@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
           }`} />
 
         <Link to="/" className="text-xl md:text-2xl font-black tracking-tighter text-white z-10 hover:opacity-70 transition-opacity">
-          SL.
+          STEPHANIE LUCENA
         </Link>
 
         {/* Desktop Links */}

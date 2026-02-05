@@ -64,7 +64,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                   Case Studies in <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Growth</span>, <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Performance</span>, and <span className="text-white font-medium italic underline decoration-indigo-500/50 underline-offset-4">Brand Building</span>.
                 </p>
                 <p className="text-xl md:text-2xl text-white font-black tracking-tight mt-6">
-                  SL. STEPHANIE LUCENA
+                  STEPHANIE LUCENA
                 </p>
               </motion.div>
 
