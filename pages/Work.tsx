@@ -1,13 +1,16 @@
 
 import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import WorkGrid from '../components/WorkGrid';
 import { CASE_STUDIES } from '../constants';
-import { CaseStudy } from '../types';
 import CaseStudyPage from '../components/CaseStudyPage';
 
 const Work: React.FC = () => {
-    const [selectedCaseStudy, setSelectedCaseStudy] = useState<CaseStudy | null>(null);
+    const { id } = useParams<{ id: string }>();
+    const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState<'all' | 'performance' | 'branding' | 'strategy'>('all');
+
+    const selectedCaseStudy = CASE_STUDIES.find(cs => cs.id === id) || null;
 
     const filteredCaseStudies = activeTab === 'all'
         ? CASE_STUDIES
@@ -17,7 +20,7 @@ const Work: React.FC = () => {
         );
 
     if (selectedCaseStudy) {
-        return <CaseStudyPage caseStudy={selectedCaseStudy} onBack={() => setSelectedCaseStudy(null)} />;
+        return <CaseStudyPage caseStudy={selectedCaseStudy} onBack={() => navigate('/work')} />;
     }
 
     return (
@@ -38,8 +41,8 @@ const Work: React.FC = () => {
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`px-6 py-2.5 rounded-xl text-sm font-bold uppercase tracking-widest transition-all duration-300 ${activeTab === tab
-                                    ? 'bg-white text-black'
-                                    : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                ? 'bg-white text-black'
+                                : 'text-slate-400 hover:text-white hover:bg-white/5'
                                 }`}
                         >
                             {tab}
@@ -50,7 +53,7 @@ const Work: React.FC = () => {
 
             <WorkGrid
                 caseStudies={filteredCaseStudies}
-                onSelect={setSelectedCaseStudy}
+                onSelect={(cs) => navigate(`/work/${cs.id}`)}
             />
         </section>
     );

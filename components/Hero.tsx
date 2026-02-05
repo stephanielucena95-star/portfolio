@@ -92,25 +92,41 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
           </div>
 
           {/* Client Category Mentions */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 1 }}
-            className="mt-20 pt-12 border-t border-white/5 flex flex-wrap gap-x-12 md:gap-x-20 gap-y-10 items-center opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700"
-          >
-            {[
-              'EYEWEAR & TECH',
-              'GLOBAL MEDIA AGENCY',
-              'LEGACY FMCG',
-              'FINTECH PLATFORM',
-              'INDUSTRY CONFERENCE',
-              'PUBLIC HEALTH INITIATIVE'
-            ].map((client) => (
-              <span key={client} className="text-xl md:text-2xl font-black text-white tracking-tighter hover:text-indigo-400 transition-colors cursor-default">
-                {client}
-              </span>
-            ))}
-          </motion.div>
+          <div className="mt-20 pt-12 border-t border-white/5 space-y-10">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.6 }}
+              className="text-indigo-400 font-black tracking-[0.2em] uppercase text-xs"
+            >
+              Some of my best works were done with these industries.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 1 }}
+              className="flex flex-wrap gap-x-12 md:gap-x-20 gap-y-10 items-center opacity-60 hover:opacity-100 transition-opacity duration-700"
+            >
+              {[
+                { name: 'EYEWEAR & TECH', id: 'wearable-tech-launch' },
+                { name: 'GLOBAL MEDIA AGENCY', id: '#tools' },
+                { name: 'LEGACY FMCG', id: 'oral-care-content' },
+                { name: 'E-COMMERCE', id: 'fmcg-ecommerce-system' },
+                { name: 'FINTECH PLATFORM', id: 'fintech-gtm' },
+                { name: 'INDUSTRY CONFERENCE', id: 'industry-conference-sem' },
+                { name: 'PUBLIC HEALTH INITIATIVE', id: 'public-health-initiative' }
+              ].map((client) => (
+                <Link
+                  key={client.name}
+                  to={client.id.startsWith('#') ? client.id : `/work/${client.id}`}
+                  className="text-xl md:text-2xl font-black text-white tracking-tighter hover:text-indigo-400 transition-all hover:scale-105 active:scale-95 block"
+                >
+                  {client.name}
+                </Link>
+              ))}
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
