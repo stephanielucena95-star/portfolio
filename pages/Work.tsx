@@ -4,13 +4,23 @@ import { useNavigate, useParams } from 'react-router-dom';
 import WorkGrid from '../components/WorkGrid';
 import { CASE_STUDIES } from '../constants';
 import CaseStudyPage from '../components/CaseStudyPage';
+import { useSEO } from '../hooks/useSEO';
 
 const Work: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
-    const [activeTab, setActiveTab] = useState<'all' | 'performance' | 'branding' | 'strategy'>('all');
+    const [activeTab, setActiveTab] = useState<'all' | 'performance' | 'branding' | 'strategy' | 'founding'>('all');
 
     const selectedCaseStudy = CASE_STUDIES.find(cs => cs.id === id) || null;
+
+    useSEO({
+        title: selectedCaseStudy ? selectedCaseStudy.title : "Work",
+        description: selectedCaseStudy
+            ? selectedCaseStudy.description
+            : "Explore case studies in Growth Marketing, Performance Media, and Brand Strategy for global brands and founding ventures.",
+        type: selectedCaseStudy ? "article" : "website",
+        image: selectedCaseStudy ? selectedCaseStudy.imageUrl : undefined
+    });
 
     const filteredCaseStudies = activeTab === 'all'
         ? CASE_STUDIES
@@ -31,12 +41,12 @@ const Work: React.FC = () => {
                         Case Studies
                     </h2>
                     <p className="text-slate-400 text-xl leading-relaxed">
-                        Collecting growth work across global brands, FMCG, fintech, and events. Click to explore strategy and impact.
+                        Collecting growth work across global brands, FMCG, fintech, events, and founding ventures. Click to explore strategy and impact.
                     </p>
                 </div>
 
                 <div className="flex flex-wrap gap-2 p-1.5 bg-white/5 rounded-2xl border border-white/10">
-                    {(['all', 'performance', 'branding', 'strategy'] as const).map((tab) => (
+                    {(['all', 'performance', 'branding', 'strategy', 'founding'] as const).map((tab) => (
                         <button
                             key={tab}
                             onClick={() => setActiveTab(tab)}

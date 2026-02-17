@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSEO } from '../hooks/useSEO';
 
 const About: React.FC = () => {
+    useSEO({
+        title: "About",
+        description: "Learn more about Stephanie Lucena's approach to Growth Marketing, Paid Media, and Performance Strategy.",
+    });
     return (
         <section id="about" className="py-20 md:py-32 px-6 lg:px-12 bg-white/[0.01] border-y border-white/5 mt-10 md:mt-20">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20">

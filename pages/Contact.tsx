@@ -2,8 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
+import { useSEO } from '../hooks/useSEO';
 
 const Contact: React.FC = () => {
+    useSEO({
+        title: "Contact",
+        description: "Get in touch with Stephanie Lucena for growth marketing consultation, paid media strategy, or e-commerce scaling projects.",
+    });
     return (
         <div className="pt-24 md:pt-40 pb-32 px-6 lg:px-12 max-w-4xl mx-auto">
             <div className="space-y-16 text-center mb-16">

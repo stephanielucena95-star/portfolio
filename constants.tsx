@@ -188,6 +188,37 @@ export const CASE_STUDIES: CaseStudy[] = [
     myRole: "PR & Growth – Led media and communication strategy for the app launch.",
     imageUrl: "/assets/projects/public-health.png",
     tags: ["Public Health", "Non-Profit", "Communication"]
+  },
+  {
+    id: "daily-taho",
+    title: "Daily Taho: Building a Digital Media Brand from Scratch",
+    category: "Product & Founding",
+    client: "Personal Project",
+    description: "Launched a niche digital media brand focused on culture and community, leveraging AI-driven development and community-first growth.",
+    context: "Daily Taho is a personal venture aimed at exploring the intersection of culture, digital media, and technology, specifically using Antigravity for rapid product iteration.",
+    challenge: "Building a cohesive brand identity and cross-platform presence (Web, Instagram, TikTok, Facebook) from zero while maintaining high-quality content output.",
+    strategy: "Community-first growth strategy paired with AI-accelerated development. Focus on platform-native content and clear, relatable brand voice.",
+    execution: [
+      "Designed and developed dailytaho.com using Antigravity.",
+      "Established brand guidelines and visual identity across Social Media.",
+      "Implemented a vertical-video first strategy for TikTok and Instagram Reels.",
+      "Built automated workflows for content distribution and community engagement."
+    ],
+    impact: [
+      "Successful launch across 4 major platforms.",
+      "High engagement rates within the target cultural niche.",
+      "Demonstrated end-to-end product ownership from vision to technical execution.",
+      "Created a scalable foundation for a niche media property."
+    ],
+    myRole: "Founder & Growth Architect — Led vision, design, development, and cross-platform growth strategy.",
+    imageUrl: "/assets/projects/daily-taho.png",
+    tags: ["Founder", "Product Strategy", "Growth"],
+    links: [
+      { label: "Website", url: "https://dailytaho.com" },
+      { label: "Facebook", url: "https://www.facebook.com/dailytaho" },
+      { label: "Instagram", url: "https://instagram.com/dailytaho" },
+      { label: "TikTok", url: "https://tiktok.com/@dailytaho" }
+    ]
   }
 ];
 

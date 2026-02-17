@@ -34,7 +34,7 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
 
         {/* Hero Image */}
         <div className="aspect-[21/9] rounded-[3rem] overflow-hidden mb-32 border border-white/5 bg-slate-900">
-          <img src={caseStudy.imageUrl} className="w-full h-full object-contain md:object-cover" alt={caseStudy.title} />
+          <img src={caseStudy.imageUrl} className="w-full h-full object-contain" alt={caseStudy.title} />
         </div>
 
         {/* Detailed Content */}
@@ -114,6 +114,26 @@ const CaseStudyPage: React.FC<PageProps> = ({ caseStudy, onBack }) => {
                 {caseStudy.myRole}
               </p>
             </div>
+
+            {caseStudy.links && (
+              <div className="p-10 border border-white/10 rounded-[3rem] bg-white/[0.02]">
+                <h3 className="text-xl font-bold uppercase tracking-widest text-xs text-slate-400 mb-8">Links</h3>
+                <div className="flex flex-col gap-4">
+                  {caseStudy.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between group text-lg font-bold text-white hover:text-indigo-400 transition-colors"
+                    >
+                      <span>{link.label}</span>
+                      <svg size={14} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link opacity-50 group-hover:opacity-100 transition-opacity w-3.5 h-3.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
         {/* Feedback/CTA Section */}

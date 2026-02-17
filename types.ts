@@ -13,6 +13,7 @@ export interface CaseStudy {
   imageUrl: string;
   tags: string[];
   description: string; // Brief summary for index
+  links?: { label: string; url: string }[];
 }
 
 export interface Experience {

@@ -6,3 +6,5 @@ Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
+
+Sitemap: https://stephanielucena.com/sitemap.xml
