@@ -32,35 +32,15 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-10 z-10">
-          {NAV_LINKS.map((link) => {
-            const isActive = location.pathname === link.href;
-            return (
-              <div key={link.name} className="relative py-2">
-                {link.href.startsWith('/#') ? (
-                  <a
-                    href={link.href}
-                    className="text-[11px] font-bold uppercase tracking-[0.25em] text-slate-400 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${isActive ? 'text-white' : 'text-slate-400 hover:text-white'
-                      }`}
-                  >
-                    {link.name}
-                  </Link>
-                )}
-                {isActive && (
-                  <motion.div
-                    layoutId="activeNav"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-indigo-500 rounded-full"
-                  />
-                )}
-              </div>
-            );
-          })}
+          <Link to="/about" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${location.pathname === '/about' ? 'text-white' : 'text-slate-400 hover:text-white'}`}>
+            About
+          </Link>
+          <Link to="/work" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${location.pathname.startsWith('/work') ? 'text-white' : 'text-slate-400 hover:text-white'}`}>
+            Work
+          </Link>
+          <Link to="/insights" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${location.pathname.startsWith('/insights') ? 'text-white' : 'text-slate-400 hover:text-white'}`}>
+            Insights
+          </Link>
           <Link
             to="/contact"
             className="group relative px-6 py-2.5 overflow-hidden rounded-full font-bold text-[11px] uppercase tracking-[0.2em]"
@@ -88,32 +68,6 @@ const Navbar: React.FC = () => {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden fixed inset-0 z-40 bg-[#050505]/95 backdrop-blur-xl px-6 pt-32 flex flex-col gap-8 items-center"
           >
-            {NAV_LINKS.map((link, i) => (
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
-                key={link.name}
-              >
-                {link.href.startsWith('/#') ? (
-                  <a
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-4xl font-bold tracking-tighter text-slate-400 hover:text-white"
-                  >
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link
-                    to={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-4xl font-bold tracking-tighter text-slate-400 hover:text-white"
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </motion.div>
-            ))}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -121,9 +75,30 @@ const Navbar: React.FC = () => {
               className="mt-8 w-full"
             >
               <Link
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-center py-4 text-xl font-bold ${location.pathname === '/about' ? 'text-white' : 'text-slate-400'}`}
+              >
+                About
+              </Link>
+              <Link
+                to="/work"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-center py-4 text-xl font-bold ${location.pathname.startsWith('/work') ? 'text-white' : 'text-slate-400'}`}
+              >
+                Work
+              </Link>
+              <Link
+                to="/insights"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-center py-4 text-xl font-bold ${location.pathname.startsWith('/insights') ? 'text-white' : 'text-slate-400'}`}
+              >
+                Insights
+              </Link>
+              <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-center bg-white text-black py-6 rounded-2xl font-bold text-xl shadow-[0_20px_40px_rgba(255,255,255,0.1)]"
+                className="block mt-4 w-full text-center bg-white text-black py-4 rounded-full font-bold text-xl shadow-[0_10px_30px_rgba(255,255,255,0.1)]"
               >
                 Let's Talk
               </Link>

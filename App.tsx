@@ -24,6 +24,9 @@ const ScrollToTop = () => {
   return null;
 };
 
+import Insights from './pages/Insights';
+import ArticleDetail from './pages/ArticleDetail';
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -40,6 +43,8 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/work" element={<Work />} />
             <Route path="/work/:id" element={<Work />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/insights/:slug" element={<ArticleDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
