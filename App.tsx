@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Work from './pages/Work';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <Analytics />
+      <SpeedInsights />
       <div className="min-h-screen selection:bg-white selection:text-black bg-[#050505] text-slate-200">
         <div className="fixed inset-0 bg-grid pointer-events-none z-0 opacity-40" />
         <div className="fixed inset-0 bg-gradient-to-tr from-indigo-500/5 via-transparent to-purple-500/5 pointer-events-none z-0" />
