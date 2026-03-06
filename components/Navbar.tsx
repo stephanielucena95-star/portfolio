@@ -41,6 +41,14 @@ const Navbar: React.FC = () => {
           <Link to="/insights" className={`text-[11px] font-bold uppercase tracking-[0.25em] transition-colors ${location.pathname.startsWith('/insights') ? 'text-white' : 'text-slate-400 hover:text-white'}`}>
             Insights
           </Link>
+          <a
+            href="https://calendly.com/stephanie-lucena95/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] font-bold uppercase tracking-[0.25em] text-indigo-400 hover:text-indigo-300 transition-colors"
+          >
+            Book a Call
+          </a>
           <Link
             to="/contact"
             className="group relative px-6 py-2.5 overflow-hidden rounded-full font-bold text-[11px] uppercase tracking-[0.2em]"
@@ -95,6 +103,15 @@ const Navbar: React.FC = () => {
               >
                 Insights
               </Link>
+              <a
+                href="https://calendly.com/stephanie-lucena95/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-center py-4 text-xl font-bold text-indigo-400"
+              >
+                Book a Call
+              </a>
               <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
