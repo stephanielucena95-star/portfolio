@@ -16,7 +16,20 @@ const ArticleDetail: React.FC = () => {
         title: article?.frontmatter.title || "Article Not Found",
         description: article?.frontmatter.description,
         type: "article",
-        image: article?.frontmatter.imageUrl
+        image: article?.frontmatter.imageUrl,
+        jsonLd: article ? {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": article.frontmatter.title,
+            "description": article.frontmatter.description,
+            "image": article.frontmatter.imageUrl ? `https://stephanielucena.com${article.frontmatter.imageUrl}` : undefined,
+            "datePublished": article.frontmatter.date,
+            "author": {
+                "@type": "Person",
+                "name": "Stephanie Lucena",
+                "url": "https://stephanielucena.com"
+            }
+        } : undefined
     });
 
     useEffect(() => {

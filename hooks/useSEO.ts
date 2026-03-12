@@ -5,9 +5,10 @@ interface SEOProps {
     description?: string;
     type?: string;
     image?: string;
+    jsonLd?: object;
 }
 
-export const useSEO = ({ title, description, type = 'website', image }: SEOProps) => {
+export const useSEO = ({ title, description, type = 'website', image, jsonLd }: SEOProps) => {
     useEffect(() => {
         const baseTitle = 'Stephanie Lucena | Growth Marketer & Paid Media Strategist';
         const finalTitle = title ? `${title} | Stephanie Lucena` : baseTitle;
@@ -40,5 +41,20 @@ export const useSEO = ({ title, description, type = 'website', image }: SEOProps
             updateMeta('meta[property="og:image"]', image);
             updateMeta('meta[property="twitter:image"]', image);
         }
-    }, [title, description, type, image]);
+
+        // Handle JSON-LD
+        let script: HTMLScriptElement | null = null;
+        if (jsonLd) {
+            script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(jsonLd);
+            document.head.appendChild(script);
+        }
+
+        return () => {
+            if (script) {
+                document.head.removeChild(script);
+            }
+        };
+    }, [title, description, type, image, jsonLd]);
 };
