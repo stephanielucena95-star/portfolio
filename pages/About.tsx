@@ -16,7 +16,7 @@ const About: React.FC = () => {
                         <h2 className="text-4xl font-bold text-white mb-8 tracking-tight uppercase tracking-widest">About Me</h2>
                         <div className="space-y-6 text-xl text-slate-400 leading-relaxed">
                             <p>
-                                I’m a <span className="text-white font-bold">Growth Marketer</span> with a strong foundation in paid media and performance strategy, working end-to-end from problem definition to execution and optimization.
+                                Hi! I'm Stephanie. I’m a <span className="text-white font-bold">Growth Marketer</span> with a strong foundation in paid media and performance strategy, working end-to-end from problem definition to execution and optimization.
                             </p>
                             <p>
                                 I focus on translating business and growth objectives into clear marketing strategies, shaping brand narratives, and activating across paid social and search to drive awareness and conversion.
