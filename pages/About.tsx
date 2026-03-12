@@ -39,7 +39,16 @@ const About: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col gap-12">
+                    <div className="relative aspect-square w-full max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl group">
+                        <img
+                            src="/assets/stephanie-portrait.jpg"
+                            alt="Stephanie Lucena"
+                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </div>
+
                     <div className="p-6 md:p-10 border border-white/10 rounded-3xl md:rounded-[3rem] bg-indigo-600/5">
                         <h3 className="text-2xl font-bold text-white mb-6">The Growth Approach</h3>
                         <p className="text-slate-400 text-lg leading-relaxed mb-8">
