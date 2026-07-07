@@ -21,7 +21,7 @@ const STEPS = [
     },
     {
         icon: <BarChart3 className="w-6 h-6" />,
-        title: "Data-Led Logic",
+        title: "Direct Response Marketing",
         desc: "Continuous, non-linear optimization based on granular performance signals."
     }
 ];
