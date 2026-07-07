@@ -22,7 +22,7 @@ const STEPS = [
     {
         icon: <BarChart3 className="w-6 h-6" />,
         title: "Direct Response Marketing",
-        desc: "Continuous, non-linear optimization based on granular performance signals."
+        desc: "Conversion-focused campaigns designed to trigger immediate action, prioritizing trackable ROI and customer acquisition."
     }
 ];
 
