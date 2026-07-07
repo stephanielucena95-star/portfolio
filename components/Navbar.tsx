@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
             Insights
           </Link>
           <a
-            href="https://calendly.com/stephanie-lucena95/30min"
+            href="https://calendly.com/stephanie-lucena95/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[11px] font-bold uppercase tracking-[0.25em] text-indigo-400 hover:text-indigo-300 transition-colors"
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
                 Insights
               </Link>
               <a
-                href="https://calendly.com/stephanie-lucena95/30min"
+                href="https://calendly.com/stephanie-lucena95/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}

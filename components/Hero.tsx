@@ -82,7 +82,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
                   <ArrowDownRight size={24} className="group-hover:rotate-45 transition-transform duration-300" />
                 </button>
                 <a
-                  href="https://calendly.com/stephanie-lucena95/30min"
+                  href="https://calendly.com/stephanie-lucena95/discovery-call"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative flex items-center justify-center gap-4 bg-indigo-600 border border-indigo-500/50 text-white px-10 py-5 md:py-6 rounded-full font-bold text-lg md:text-xl hover:bg-indigo-500 hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)]"

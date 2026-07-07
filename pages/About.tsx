@@ -115,7 +115,7 @@ const About: React.FC = () => {
 
                     <div className="flex flex-col items-center gap-6">
                         <a
-                            href="https://calendly.com/stephanie-lucena95/30min"
+                            href="https://calendly.com/stephanie-lucena95/discovery-call"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold text-base hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] group"
