@@ -93,6 +93,43 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Audit CTA Section */}
+            <div className="mt-24 md:mt-36 pt-16 border-t border-white/5 max-w-4xl mx-auto text-center">
+                <div className="relative p-8 md:p-16 border border-white/10 rounded-3xl md:rounded-[3rem] bg-gradient-to-br from-indigo-600/10 via-purple-600/5 to-transparent overflow-hidden shadow-2xl">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-500/10 blur-[80px] rounded-full -z-10 animate-pulse" />
+                    
+                    {/* Badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-[10px] font-bold uppercase tracking-widest mb-6">
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                        Shopify Performance Audit
+                    </div>
+                    
+                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-6 tracking-tight max-w-2xl mx-auto leading-tight">
+                        Spending on Meta or Google but not sure what’s actually driving sales?
+                    </h3>
+                    
+                    <p className="text-slate-400 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                        I’ll audit your ad account, landing page, and tracking setup, then send you a prioritized action plan.
+                    </p>
+
+                    <div className="flex flex-col items-center gap-6">
+                        <a
+                            href="https://calendly.com/stephanie-lucena95/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full font-bold text-base hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] group"
+                        >
+                            Book a 30-minute audit call
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        
+                        <p className="text-[10px] text-slate-500 font-medium uppercase tracking-[0.2em]">
+                            Ideal for Shopify brands spending at least $5k/month
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
